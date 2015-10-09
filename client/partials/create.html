@@ -1,0 +1,14 @@
+<div ng-controller="PollsController">
+	<a href="#/dashboard">Cancel</a>
+	<h1>Put the question and options here:</h1>
+	<form name='form' novalidate>
+		<div>Question: <input type='text' ng-model='newPoll.question' ng-minlength="8" ng-required="true"></div>
+		<div>Option 1: <input type='text' ng-model='newPoll.option1' ng-minlength="3" ng-required="true"></div>
+		<div>Option 2: <input type='text' ng-model='newPoll.option2' ng-minlength="3" ng-required="true"></div>
+		<div>Option 3: <input type='text' ng-model='newPoll.option3' ng-minlength="3" ng-required="true"></div>
+		<div>Option 4: <input type='text' ng-model='newPoll.option4' ng-min-length="3" ng-required="true"></div>
+		<input type='submit' value="Create Poll" ng-click="addPoll(newPoll)" ng-disabled="form.$invalid">
+	</form>
+	<p ng-if="form.$invalid">Question must contain more than 8 characters</p>
+	<p ng-if="form.$invalid">Options must contain more than 3 characters</p>
+</div>

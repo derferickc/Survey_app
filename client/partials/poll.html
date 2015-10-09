@@ -1,0 +1,31 @@
+<div ng-controller="PollsController">
+	<a href="#/dashboard">Go to polls</a>
+	<h1 ng-bind="poll.question"></h1>
+	<p>Click the Vote utton to choose one.</p>
+	<table>
+		<tr>
+			<th>Option</th>
+			<th>Current Count of Votes</th>
+			<th>Action</th>
+		</tr>
+		<tr>
+			<td ng-bind="poll.options.option1"></td>
+			<td ng-bind="poll.vote1"></td>
+			<td><form><input type='submit' value='vote' ng-click="vote(poll._id, 1)"></form></td>
+		</tr>
+		<tr>
+			<td ng-bind="poll.options.option2"></td>
+			<td ng-bind="poll.vote2"></td>
+			<td><form><input type='submit' value='vote' ng-click="vote(poll._id, 2)"></form></td>
+		</tr>
+		<tr>
+			<td ng-bind="poll.options.option3"></td>
+			<td ng-bind="poll.vote3"></td>
+			<td><form><input type='submit' value='vote' ng-click="vote(poll._id, 3)"></form></td>
+		</tr>
+		<tr>
+			<td ng-bind="poll.options.option4"></td>
+			<td ng-bind="poll.vote4"></td>
+			<td><form><input type='submit' value='vote' ng-click="vote(poll._id, 4)"></form></td>
+		</tr>
+</div>
